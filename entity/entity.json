@@ -1,0 +1,10 @@
+[
+	{
+		"KsdCounter":
+		{
+			"type":"String",
+			"amount":"Integer",
+			"remark":"String"
+		}
+	}
+]
