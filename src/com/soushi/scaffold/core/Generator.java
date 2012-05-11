@@ -1,8 +1,6 @@
 package com.soushi.scaffold.core;
 
 import java.io.IOException;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -84,8 +82,8 @@ public class Generator {
 		FileHelper fileHelper = new FileHelper();
 		FreeMarkerHelper fmHelper = new FreeMarkerHelper();
 		String content = fmHelper.render(model, GlobalVariables.VIEW_LIST_TEMPLATE_PATH);
-		String outputPath = GlobalVariables.OUTPUT_ROOTPATH+GlobalVariables.OUTPUT_RELATIVE_VIEW_PATH;
-		fileHelper.createFile(outputPath+co.getClassName()+"/", "list", content, "ftl");
+		String outputPath = GlobalVariables.OUTPUT_ROOTPATH+GlobalVariables.OUTPUT_RELATIVE_VIEW_PATH.toLowerCase();
+		fileHelper.createFile(outputPath+co.getClassName().toLowerCase()+"/", "list", content, "ftl");
 	}
 	
 	public static void generateViewEdit(Map<String, Object> model) throws IOException, TemplateException
@@ -94,8 +92,8 @@ public class Generator {
 		FileHelper fileHelper = new FileHelper();
 		FreeMarkerHelper fmHelper = new FreeMarkerHelper();
 		String content = fmHelper.render(model, GlobalVariables.VIEW_EDIT_TEMPLATE_PATH);
-		String outputPath = GlobalVariables.OUTPUT_ROOTPATH+GlobalVariables.OUTPUT_RELATIVE_VIEW_PATH;
-		fileHelper.createFile(outputPath+co.getClassName()+"/", "edit", content, "ftl");
+		String outputPath = GlobalVariables.OUTPUT_ROOTPATH+GlobalVariables.OUTPUT_RELATIVE_VIEW_PATH.toLowerCase();
+		fileHelper.createFile(outputPath+co.getClassName().toLowerCase()+"/", "edit", content, "ftl");
 	}
 	
 	/**	从json文件获取类对象队列

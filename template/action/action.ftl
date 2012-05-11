@@ -34,7 +34,7 @@ public class ${classObject.className!}Action extends BaseAction{
 		PageContext pageCtx = ${classObject.className?uncap_first!}Mng.queryPage(pageNum, numPerPage);
  		model.addAttribute("pageCtx", pageCtx);
 		model.addAttribute("${classObject.className?uncap_first!}",${classObject.className?uncap_first!});
-		return "${module!}/${classObject.className?uncap_first!}/list";
+		return "${module!}/${classObject.className?lower_case!}/list";
 	}
 	
 	@RequestMapping("${module!}/${classObject.className?lower_case!}/add")

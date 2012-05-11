@@ -1,10 +1,14 @@
 [
 	{
-		"KsdCounter":
+		"GiftCardLog":
 		{
-			"type":"String",
-			"amount":"Integer",
-			"remark":"String"
+			"cardNo":"String",
+			"amount":"BigDecimal",
+			"memberId":"Integer",
+			"nickName":"String",
+			"orderId":"Integer",
+			"orderNo":"String",
+			"createTime":"Date"
 		}
 	}
 ]
